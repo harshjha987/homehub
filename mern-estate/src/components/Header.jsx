@@ -1,5 +1,5 @@
 import { FaSearch } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -17,9 +17,11 @@ function Header() {
         <FaSearch className = "text-slate-600" />
     </form>
     <ul className="flex flex-wrap md:px-20">
+    
     <Link to= "/home">
     <li className="text-slate-300 mx-3 hidden sm:inline hover:underline cursor-pointer">Home</li>
     </Link>
+    
 
     <Link to= "/about">
     <li className="text-slate-300 mx-3  hidden sm:inline  hover:underline cursor-pointer">About</li>
