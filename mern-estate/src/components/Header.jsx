@@ -26,7 +26,7 @@ function Header() {
     </Link>
         
     <Link to = "/sign-in">
-       <li className="text-slate-300 hover:underline cursor-pointer ">Sign In</li>
+       <li className="text-slate-300 md:mx-3 hover:underline cursor-pointer ">Sign In</li>
     </Link>
         
     </ul>
