@@ -18,7 +18,7 @@ function Header() {
     </form>
     <ul className="flex flex-wrap md:px-20">
     
-    <Link to= "/home">
+    <Link to= "/">
     <li className="text-slate-300 mx-3 hidden sm:inline hover:underline cursor-pointer">Home</li>
     </Link>
     
@@ -27,7 +27,7 @@ function Header() {
     <li className="text-slate-300 mx-3  hidden sm:inline  hover:underline cursor-pointer">About</li>
     </Link>
         
-    <Link to = "/sign-in">
+    <Link to = "/signup">
        <li className="text-slate-300 md:mx-3 hover:underline cursor-pointer ">Sign In</li>
     </Link>
         
