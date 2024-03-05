@@ -4,7 +4,7 @@ import { ApiError } from "../utils/ApiError.js";
 
 export const signup = async (req,res,next)=>{
 
-    const {name, email, password} = req.body;
+    const {username, email, password} = req.body;
     const hashedPassword = bcryptjs.hashSync(password,10);
     if( !username || !email || !password ) 
     return res.status(400).
@@ -18,13 +18,7 @@ export const signup = async (req,res,next)=>{
         next(error);
         
     }
-    const existedUser = await User.findOne({
-        $or: [{ username }, { email }]
-    })
-    if(existedUser){
-        throw new ApiError(409,"Username or email already exists");
-
-    }
+    
 
 
 };
