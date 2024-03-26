@@ -6,7 +6,7 @@ import OAuth from '../components/OAuth.jsx';
 function SignIn() {
 
   const [formData,setFormData] = useState({})
-  const {loading,error} = useSelector((state)=> state.user)
+  const { loading, error } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -57,11 +57,12 @@ function SignIn() {
      
         <input type='text' id='email' placeholder='Enter Email' className='border p-3 rounded-lg' onChange={handleChange}  />
         <input type='text' id = 'password' placeholder='Enter Password' className='border p-3 rounded-lg'  onChange={handleChange} />
-        <button disabled = {loading}
-         className='bg-slate-700 text-white p-3 text-center  uppercase rounded-lg hover:opacity-95 disabled:opacity-8'
-         >
-      {loading ? 'Loading...' : 'Sign In'}
-     </button>
+        <button
+          disabled={loading}
+          className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
+        >
+          {loading ? 'Loading...' : 'Sign In'}
+        </button>
      <OAuth />
      </form>
      
