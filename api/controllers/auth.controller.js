@@ -71,14 +71,9 @@ export const google = async (req, res, next) => {
 };
 export const logoutUser = async(req,res,next)=>{
   try {
-      await User.findByIdAndUpdate(req.user.id,{
-          $set : {
-              access_token : undefined
-          }
-      },{
-          new : true
-      }
-      )
+
+  res.clearCookie("access_token")
+      
       res.clearCookie('access_token');
       res.json(200).json("User logged Out");
   } catch (error) {
