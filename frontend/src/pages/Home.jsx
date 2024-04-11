@@ -1,4 +1,6 @@
 import React from 'react'
+import ChatBot from 'chit-chat-react';
+
 
 function Home() {
   return (
