@@ -27,8 +27,9 @@ function Header() {
    <header className='h-16 w-full bg-slate-300 flex items-center shadow-md justify-between  p-3'>
    <Link to="/">
    <h1 className='font-bold text-xl md:text-2xl flex felx-wrap md:px-20'>
-        <span className='text-gray-900'>Dream</span>
-        <span className='text-red-800'>Home</span>
+        <span className='text-gray-900'>Home</span>
+        <span className='text-red-800'>Hub</span>
+        <span className='text-slate-800'>.com</span>
     </h1>
 
    </Link>
