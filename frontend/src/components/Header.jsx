@@ -24,12 +24,12 @@ function Header() {
     }
   },[location.search])
   return (
-   <header className='h-16 w-full bg-slate-300 flex items-center shadow-md justify-between  p-3'>
+   <header className='h-16 w-full bg-gradient-to-b from-gray-800 to-gray-900 flex items-center shadow-md justify-between bg-transparent  p-5'>
    <Link to="/">
    <h1 className='font-bold text-xl md:text-2xl flex felx-wrap md:px-20'>
-        <span className='text-gray-900'>Home</span>
-        <span className='text-red-800'>Hub</span>
-        <span className='text-slate-800'>.com</span>
+        <span className='text-gray-100 text-shadow font-serif '>Home</span>
+        <span className='text-red-500 text-shadow font-serif'>Hub</span>
+        <span className='text-slate-100 text-shadow font-serif'>.com</span>
     </h1>
 
    </Link>
@@ -49,19 +49,19 @@ function Header() {
     <ul className="flex flex-wrap md:px-20">
     
     <Link to= "/">
-    <li className="text-slate-900 mx-3 hidden sm:inline hover:underline cursor-pointer">Home</li>
+    <li className="text-slate-100 mx-3 hidden sm:inline hover:underline cursor-pointer font-">Home</li>
     </Link>
     
 
     <Link to= "/about">
-    <li className="text-slate-900 mx-3  hidden sm:inline  hover:underline cursor-pointer">About</li>
+    <li className="text-slate-100 mx-3  hidden sm:inline  hover:underline cursor-pointer">About</li>
     </Link>
       
     <Link to = "/profile">
     {currentUser?(<img className="rounded-lg w-7 h-7 object-cover" src = {currentUser.avatar} alt = "profile"/>
     ):(
    
-      <li className="text-slate-900 md:mx-3 hover:underline cursor-pointer ">Sign In</li>)}
+      <li className="text-slate-100 md:mx-3 hover:underline cursor-pointer ">Sign In</li>)}
     </Link>
         
     

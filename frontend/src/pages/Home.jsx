@@ -5,6 +5,7 @@ import {Navigation} from "swiper/modules"
 import SwiperCore from 'swiper';
 import 'swiper/css/bundle';
 import ListingItem from '../components/ListingItem';
+import Footer from '../components/Footer';
 
 
 
@@ -60,20 +61,31 @@ function Home() {
     <div>
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl
       mx-auto'>
-        <h1 className=' text-3xl text-slate-700 font-bold
-        lg:text-6xl'>
-        Welcome to HomeHub.com
+        <h1 className=' text-3xl font-extrabold
+        lg:text-4xl bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text  text-transparent'>
+        Welcome to Home<span className='text-purple-900'>Hub</span>.com
         </h1>
-        <h1 className='text-3xl text-slate-900 font-bold'>
-        Discover Your <span className='text-slate-500'>Perfect</span><br /> Home Today!
+        <h1 className='text-3xl font-bold text-purple-700 transform transition-transform hover:-translate-y-1 '>
+        Discover Your <span className='text-slate-800 '>Perfect</span> Home Today!
         </h1>
-        <div className='text-gray-400 text-xs sm:text-sm'>
-        At HomeHub.com, we're dedicated to simplifying your journey in finding, buying, renting, or selling a home. Whether you're a first-time buyer, seasoned investor, or looking for a cozy rental, we have the tools and resources to make 
-        
-        <br/>your real estate experience seamless and rewarding.
+        <div className='text-gray-600 text-xs sm:text-sm'>
+        <p className="text-base  bg-gradient-to-r from-gray-800 to-slate-900 bg-clip-text text-transparent">
+  At HouseHub.com, we're passionate about simplifying the process of buying, renting, and selling homes.
+</p>
+<p className="text-base  text-slate-700 ">
+  Whether you're looking for your dream house, searching for the perfect rental property, or considering<br /> listing your home, we're here to make it effortless and enjoyable.
+</p>
+<p className="text-sm font-bold text-black animate-pulse">
+  Our mission is to connect buyers, sellers, renters, and landlords in a seamless online marketplace.
+</p>
+
+
+
+
+
 
         </div>
-        <Link to={"/search"} className='text-xs sm:text-sm text-blue-800 font-bold hover:underline'>
+        <Link to={"/search"} className='animate-bounce text-xs sm:text-sm text-blue-900 font-bold hover:underline'>
         Let's get Started...
 
         </Link>
@@ -98,7 +110,7 @@ function Home() {
         <div>
         <div className='my-3'>
           <h2 className='text-2xl font-semibold text-slate-800'>Recent Offers</h2>
-          <Link className='text-sm text-blue-900 hover:underline' to={'/search?offer=true'}>
+          <Link className='text-sm text-blue-900 hover:underline font-semibold' to={'/search?offer=true'}>
             Show More Offers...
           </Link>
         </div>
@@ -116,8 +128,8 @@ function Home() {
         <div>
         <div className='my-3'>
           <h2 className='text-2xl font-semibold text-slate-800'>Recent places for Rent</h2>
-          <Link className='text-sm text-blue-900 hover:underline' to={'/search?type=rent'}>
-            Show More places for rent.
+          <Link className='text-sm text-blue-900 hover:underline font-semibold' to={'/search?type=rent'}>
+            Show More places for rent...
           </Link>
         </div>
         <div className='flex flex-wrap gap-4'>
@@ -134,8 +146,8 @@ function Home() {
         <div>
         <div className='my-3'>
           <h2 className='text-2xl font-semibold text-slate-800'>Recent places for Sale</h2>
-          <Link className='text-sm text-blue-900 hover:underline' to={'/search?type=sale'}>
-            Show More places for sale.
+          <Link className='text-sm text-blue-900 hover:underline font-semibold' to={'/search?type=sale'}>
+            Show More places for sale...
           </Link>
         </div>
         <div className='flex flex-wrap gap-4'>
@@ -152,9 +164,10 @@ function Home() {
 
 
       </div>
-      
+      <Footer />
 
     </div>
+   
   )
 }
 

@@ -154,11 +154,11 @@ const handleListingDelete = async (listingId) => {
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
-       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
+       <h1 className='text-3xl font-bold font-serif text-purple-900 text-center my-7'>Profile</h1>
      <form className='gap-4 flex flex-col' onSubmit={handleSubmit}>
      <input onChange={(e)=>setFile(e.target.files[0])} type='file' hidden ref={fileRef} accept='image/*' />
      <img onClick={()=>fileRef.current.click()} src = {formData?.avatar|| currentUser.avatar} alt='profile' className='rounded-lg h-24
-     w-24 object-cover cursor-pointer self-center mt-2'/>
+     w-24 object-cover cursor-pointer self-center mt-2 transform hover:scale-110 transition duration-300 shadow-lg'/>
      <p className='text-sm self-center'>
       {imageUploadError?
       (<span className='text-red-700'>Error in Image Upload(Image must be less than 2 mb)</span>)
@@ -206,7 +206,7 @@ const handleListingDelete = async (listingId) => {
       </p>
       {userListings && userListings.length > 0 && (
         <div className='flex flex-col gap-4'>
-          <h1 className='text-center mt-7 text-2xl font-semibold'>
+          <h1 className='text-center mt-7 text-2xl font-sans text-slate-950 font-semibold'>
             Your Listings
           </h1>
           {userListings.map((listing) => (
