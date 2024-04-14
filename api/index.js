@@ -27,12 +27,7 @@ app.listen(3000,()=>{
 app.use("/api/user",userRouter)
 app.use("/api/auth",authRouter);
 app.use("/api/listing",listingRouter)
-app.use(cors(
-    {
-        method : ["POST","GET"],
-        credentials : true
-    }
-))
+
 
 app.use((err,req,res,next)=>{
     const statusCode = err.statusCode || 500;
