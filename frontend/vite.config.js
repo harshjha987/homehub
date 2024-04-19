@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': 
-        'https://homehub-mfrn.vercel.app/',
+        'homehub-mfrn-qccujii5k-harsh-ranjan-jhas-projects.vercel.app',
         
     },
   },
