@@ -5,10 +5,9 @@ import react from '@vitejs/plugin-react-swc';
 export default defineConfig({
   server: {
     proxy: {
-      '/api': {
-        target: 'https://homehub-mfrn.vercel.app/',
-        secure: false,
-      },
+      '/api': 
+        'https://homehub-mfrn.vercel.app/',
+        
     },
   },
 
