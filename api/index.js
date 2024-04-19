@@ -11,6 +11,8 @@ import cors from 'cors';
 
 dotenv.config();
 
+
+
 mongoose.connect(process.env.MONGODB_URI)
 .then(()=>{
     console.log("Connected to mongodb")
@@ -21,11 +23,17 @@ mongoose.connect(process.env.MONGODB_URI)
 
 
 const app = express();
+app.use((cors()));
 app.use(express.json());
 app.use(cookieParser());
 app.listen(3000|| process.env.PORT,()=>{
     console.log("Server is listening on port 3000!!!");
 })
+
+var corsOptions = {
+    origin: 'https://homehub-smoky.vercel.app/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
 app.get("/",(req,res)=>{
     res.send("Hello world");
 })
