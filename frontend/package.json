@@ -6,7 +6,7 @@
   "headers": {
     "Cross-Origin-Embedder-Policy": "unsafe-none"
   },
-  "proxy" : "http://127.0.0.1:https://homehub-mfrn.vercel.app/",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
