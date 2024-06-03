@@ -11,6 +11,7 @@ import CreateListing from './pages/CreateListing';
 import UpdateListing from './pages/UpdateListing';
 import Listing from './pages/Listing';
 import Search from './pages/Search';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
     <Route path='/signup' element = {<SignUp />}/>
    
     <Route path = "/about" element = {<About />}/>
+    <Route path = "/contact" element = {<ContactUs />}/>
     <Route path = "/search" element = {<Search/>}/>
     <Route path = "/listing/:listingId" element = {<Listing />}/>
 
