@@ -16,6 +16,7 @@ function ContactUs() {
           <p className="text-xl text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:jha.harsh837@gmail.com" className="text-blue-600 hover:underline">jha.harsh837@gmail.com</a></p>
           <p className="text-xl text-gray-700 mb-2"><strong>Twitter:</strong> <a href="https://x.com/thattallboy987" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://x.com/thattallboy987</a></p>
           <p className="text-xl text-gray-700 mb-2"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/harsh-ranjan-jha-b16698238/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/harsh-ranjan-jha-b16698238/</a></p>
+          <p className="text-xl text-gray-700 mb-2"><strong>Github:</strong> <a href="https://www.github.com/harshjha987/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/harsh-ranjan-jha-b16698238/</a></p>
         </div>
       </div>
       <div className=' fixed bottom-0 left-0 w-full'>
