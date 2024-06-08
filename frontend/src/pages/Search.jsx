@@ -17,7 +17,7 @@ function Search() {
         order : 'desc'
     });
     useEffect(()=>{
-        const urlParams = new URLSearchParams(window.location.search);
+        const urlParams = new URLSearchParams(location.search);
         const searchTermUrl = urlParams.get('searchTerm');
         const typeFromUrl = urlParams.get('type');
         const parkingFromUrl = urlParams.get('parking');
