@@ -5,7 +5,8 @@ import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js"
 import listingRouter from "./routes/listing.route.js"
 import cookieParser from 'cookie-parser'
-import cors from 'cors';
+import path from 'path';
+
 
 
 
@@ -20,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch((err)=>{
     console.log(err)
 })
-
+const __dirname = path.resolve();
 const PORT = process.env.PORT || 3000
 const app = express();
 
@@ -35,9 +36,11 @@ var corsOptions = {
     origin: 'https://homehub-smoky.vercel.app/',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
-app.get("/",(req,res)=>{
-    res.send("Hello world");
-})
+  app.use(express.static(path.join(__dirname, '/frontend/dist')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+  })
 
 
  
