@@ -24,12 +24,12 @@ mongoose.connect(process.env.MONGODB_URI)
 
 
 const app = express();
-
+const PORT = process.env.PORT || 3000;
 app.use(express.json());
-app.use(express.static("dist"));
+// app.use(express.static("dist"));
 app.use(cookieParser());
 app.listen(3000|| process.env.PORT,()=>{
-    console.log("Server is listening on port 3000!!!");
+    console.log(`Server is listening on port ${PORT}`);
 })
 
 
@@ -41,12 +41,15 @@ app.listen(3000|| process.env.PORT,()=>{
 app.use("/api/user",userRouter)
 app.use("/api/auth",authRouter);
 app.use("/api/listing",listingRouter)
-// app.use(express.static(path.join(__dirname, '/frontend/dist')));
+app.use(express.static(path.join(__dirname, "dist")));
+
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
 // })
-
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
+  });
 
 
 
