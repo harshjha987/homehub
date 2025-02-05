@@ -7,11 +7,11 @@ function Footer() {
         <div className="container mx-auto flex justify-center">
           <Link to="/" className="text-gray-300 hover:text-white px-4">Home</Link>
           <Link to="/about" className="text-gray-300 hover:text-white px-4">About Us</Link>
-          <a href="/search" className="text-gray-300 hover:text-white px-4">Listings</a>
-          <a href="/contact" className="text-gray-300 hover:text-white px-4">Contact</a>
+          <Link to ="/search" className="text-gray-300 hover:text-white px-4">Listings</Link>
+          <Link to="/contact" className="text-gray-300 hover:text-white px-4">Contact</Link>
         </div>
         <div className="text-center text-gray-400 mt-2">
-          © 2024 HomeHub. All rights reserved.
+          © 2025 HomeHub. All rights reserved.
         </div>
       </footer>
   )
