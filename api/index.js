@@ -6,14 +6,13 @@ import authRouter from "./routes/auth.route.js"
 import listingRouter from "./routes/listing.route.js"
 import cookieParser from 'cookie-parser'
 import cors from 'cors';
-import path from 'path';
 
 
 
 dotenv.config();
 
 
-const __dirname = path.resolve();
+
 mongoose.connect(process.env.MONGODB_URI)
 .then(()=>{
     console.log("Connected to mongodb")
@@ -31,7 +30,13 @@ app.listen(3000|| process.env.PORT,()=>{
     console.log("Server is listening on port 3000!!!");
 })
 
-
+var corsOptions = {
+    origin: 'https://homehub-smoky.vercel.app/',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+app.get("/",(req,res)=>{
+    res.send("Hello world");
+})
 
 
  
@@ -40,11 +45,6 @@ app.listen(3000|| process.env.PORT,()=>{
 app.use("/api/user",userRouter)
 app.use("/api/auth",authRouter);
 app.use("/api/listing",listingRouter)
-app.use(express.static(path.join(__dirname, '/frontend/dist')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-})
 
 
 
