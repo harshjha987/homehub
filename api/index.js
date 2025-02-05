@@ -26,6 +26,7 @@ mongoose.connect(process.env.MONGODB_URI)
 const app = express();
 
 app.use(express.json());
+app.use(express.static("dist"));
 app.use(cookieParser());
 app.listen(3000|| process.env.PORT,()=>{
     console.log("Server is listening on port 3000!!!");
