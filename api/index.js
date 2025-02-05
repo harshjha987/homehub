@@ -22,9 +22,9 @@ mongoose.connect(process.env.MONGODB_URI)
     console.log(err)
 })
 
-
+const PORT = process.env.PORT || 3000
 const app = express();
-const PORT = process.env.PORT || 3000;
+
 app.use(express.json());
 // app.use(express.static("dist"));
 app.use(cookieParser());
@@ -41,15 +41,19 @@ app.listen(3000|| process.env.PORT,()=>{
 app.use("/api/user",userRouter)
 app.use("/api/auth",authRouter);
 app.use("/api/listing",listingRouter)
-app.use(express.static(path.join(__dirname, "dist")));
-
+// app.use(express.static(path.join(__dirname, "dist")));
+const frontendPath = path.join(__dirname, "dist");
+app.use(express.static(frontendPath));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(frontendPath, "index.html"));
+  });
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
 // })
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "dist", "index.html"));
-  });
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "dist", "index.html"));
+//   });
 
 
 
