@@ -36,11 +36,7 @@ var corsOptions = {
     origin: 'https://homehub-smoky.vercel.app/',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
-  app.use(express.static(path.join(__dirname, '/frontend/dist')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
-  })
+  
 
 
  
@@ -50,7 +46,11 @@ app.use("/api/user",userRouter)
 app.use("/api/auth",authRouter);
 app.use("/api/listing",listingRouter)
 
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
 
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+  })
 
 
 app.use((err,req,res,next)=>{
